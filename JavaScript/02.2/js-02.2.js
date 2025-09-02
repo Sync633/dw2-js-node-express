@@ -13,7 +13,7 @@ document.write(`<p>Nosso vetor é o: ${vetor}</p>`);
 vetor[0] = 'Pera';
 document.write(`<p>Nosso vetor é o: ${vetor}</p>`);
 
-// UNSHIFT - Insere um novo elemento no incio do vetor:
+// UNSHIFT - Insere um novo elemento no inicio do vetor:
 document.write(`<br><h4>UNSHIFT</h4>`);
 vetor.unshift('Laranja')
 document.write(`<p>Nosso vetor é o: ${vetor}</p>`);
