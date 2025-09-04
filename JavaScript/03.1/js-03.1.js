@@ -16,7 +16,7 @@ class Carro {
     buzinar() {
         return "Beep! Bepp!";
     }
-};
+}; 
 
 // Criando INSTÂNCIAS (objetos) derivadas da classe Carro
 // Objeto - Carro Popular
