@@ -26,7 +26,7 @@ document.write(`<p>Nosso novo vetor agora é o: ${numbers}</p>`);
 document.write(`<p>O número de elementos desse vetor é ${numbers.length}</p>`);
 
 // SORT - Ordena o vetor
-document.write(`<br><h4>SORT</h4>`);
+document.write(`<br><h4>SORT</h4>`); 
 
 document.write(`<p>O primeiro elemento do vetor é o: ${numbers[0]}</p>`);
 
