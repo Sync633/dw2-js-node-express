@@ -6,7 +6,7 @@ const products = ["Computadores", "Notebook", "Celular", "Tablet"];
 document.write(`<p>${products}</p>`);
 document.write(typeof products);
 
-document.write("<br>");
+document.write("<br>"); 
 document.write("<br>");
 document.write("<br>");
 
