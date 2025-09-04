@@ -28,7 +28,7 @@ document.write(`<p>O resultado da operação é ${calc(1100, "-", 1)}</p>`);
 
 // ===== SIMPLIFICANDO ARROW FUNCTION com um único retorno ===== //
 const calculadora = (num1, operador, num2) =>
-  eval(`${num1} ${operador} ${num2}`);
+  eval(`${num1} ${operador} ${num2}`); 
 document.write(`<p>O resultado da operação é ${calculadora(1100, "+", 1)}</p>`);
 
 
