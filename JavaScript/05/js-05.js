@@ -57,7 +57,7 @@ document.write(`<p>Salário em valor de dolar: ${salarioConvertido.toLocaleStrin
 // currency: EUR -> Euro
 
 // ===== FORMATAÇÃO DE MOEDAS ===== //
-document.write("<h3>Formatação de Strings:</h3>");
+document.write("<h3>Formatação de Strings:</h3>"); 
 const nome = "Miguel Santos";
 
 // ALTERANDO PARA LETRAS MAIÚSCULAS - toUpperCase()
