@@ -50,7 +50,7 @@ function multi(n1, n2) {
   document.write(`<p>A multiplicação (${n1}x${n2}) é igual a ${result}</p>`);
 }
 multi(n1, n2);
-
+ 
 // ===== FUNÇÃO COM RETORNO ===== //
 const num1 = 1000;
 const num2 = 5;
