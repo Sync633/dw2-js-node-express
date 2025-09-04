@@ -43,7 +43,7 @@ Batman.investigar = () => {
 
 // ===== Exibindo alguns atributos e métodos ===== //
 document.write(`
-    O herói ${HomemAranha.nome}, uso seu sentido aranha e ${HomemAranha.sentidoAranha()}<br>
-    O herói ${Superman.nome}<br>
-    Batman: ${Batman.correr()}
+    O herói ${HomemAranha.nome}, usou seu sentido aranha e ${HomemAranha.sentidoAranha()}<br>
+    O herói ${Superman.nome}, usou sua visao de calor e ${Superman.visaoCalor()}<br>
+    O herói ${Batman.nome}, com seu status de esconder em ${Batman.esconder}  ${Batman.investigar()}
 `);
