@@ -9,7 +9,7 @@
 // const prosseguir = document.getElementById("prosseguir");
 
 function parar() {
-  document.getElementById("parar").style.backgroundColor = "red";
+  document.getElementById("parar").style.backgroundColor = "red"; 
   document.getElementById("atencao").style.backgroundColor = "gray";
   document.getElementById("prosseguir").style.backgroundColor = "gray";
 }
