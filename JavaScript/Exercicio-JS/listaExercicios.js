@@ -11,7 +11,7 @@ saudacaoPersonalizada(nome);
 // ===== Tarefa 02 ===== //
 document.write("<h3>Tarefa 02</h1>");
 function operacaoMatematica(num1, operador, num2) {
-    document.write(`<p>O resultado de ${num1}${operador}${num2} é igual a ${eval(`${num1}${operador}${num2}`)}</p>`);
+    document.write(`<p>O resultado de ${num1}${operador}${num2} é igual a ${eval(`${num1}${operador}${num2}`)}</p>`); 
 };
 
 operacaoMatematica(10, "+", 10);
