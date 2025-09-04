@@ -25,25 +25,25 @@ class Heroi {
 const HomemAranha = new Heroi("Homem-Aranha", 100, 50, 75);
 HomemAranha.teia = 1;
 HomemAranha.sentidoAranha = () => {
-    return "Ele detectou perigo!!!!!";
+    return "Detectou perigo!!!!!";
 };
 
 const Superman = new Heroi("Superman", 10000, 5000, 7500);
 Superman.podeVoar = 1;
 Superman.visaoCalor = () => {
-    return "Olha o raio dos zóio!!!!!";
+    return "Soltando raio dos zóio!!!!!";
 };
 
 const Batman = new Heroi("Batman", 250, 25, 10);
 Batman.esconder = 1;
 Batman.investigar = () => {
-    return "Ele está investigando algo!!";
+    return "Está investigando algo!!";
 };
 
 
 // ===== Exibindo alguns atributos e métodos ===== //
 document.write(`
-    Homem-Aranha: ${HomemAranha.sentidoAranha()}<br>
-    Superman: ${Superman.nome}<br>
+    O herói ${HomemAranha.nome}, uso seu sentido aranha e ${HomemAranha.sentidoAranha()}<br>
+    O herói ${Superman.nome}<br>
     Batman: ${Batman.correr()}
 `);
