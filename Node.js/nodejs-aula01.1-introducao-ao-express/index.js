@@ -22,7 +22,7 @@ app.get("/clientes", (req, res) => {
 
 // ====== Iniciando o Servidor HTTP ====== */
 // Porta do Servidor
-const port = 8080; 
+const port = 8080;  
 
 app.listen(port, (error) => {
     if (error) {
