@@ -8,7 +8,7 @@ app.set('view engine', 'ejs')
 // Criando a primeira rota do site (ROTA PRINCIPAL)
 app.get("/", (req, res) => {
     res.render("index")
-});
+}); 
 
 // ROTA DE PRODUTOS
 app.get("/produtos", (req, res) => {
