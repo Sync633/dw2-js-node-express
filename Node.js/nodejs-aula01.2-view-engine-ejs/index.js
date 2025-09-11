@@ -17,7 +17,7 @@ app.get("/produtos", (req, res) => {
 
 // ROTA DE CLIENTES
 app.get("/clientes", (req, res) => {
-    res.render("clientes")
+    res.render("clientes") 
 });
 
 // ====== Iniciando o Servidor HTTP ====== */
