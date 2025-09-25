@@ -1,0 +1,16 @@
+<%- include ('partials/header.ejs') %>
+    <h1>Página de Produtos!</h1>
+    <hr>
+
+    <h2>Lista de Produtos: </h2>
+    <ul>
+        <% produtos.forEach(produto => { %>
+            <li><%=produto.nome%></li>
+            <li><%=produto.preco.toLocaleString("pt-br", {style: "currency", currency: "BRL"})%></li>
+            <br>
+        <% }); %>
+    </ul>
+
+    <br>
+    <a href="/"><< Voltar a HomePage</a>
+<%- include ('partials/footer.ejs') %>
