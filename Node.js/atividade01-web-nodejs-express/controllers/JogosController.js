@@ -5,6 +5,7 @@ const router = express.Router();
 // ROTA DE JOGOS
 router.get("/jogos", (req, res) => {
     const jogos = [
+        {img: "/imgs/warthunder.png", titulo: "War Thunder", desenvolvedora: "Gaijin Entertainment", ano: 2013},
         {img: "/imgs/ori.png", titulo: "Ori and the Blind Forest", desenvolvedora: "Moon Studios", ano: 2015},
         {img: "/imgs/gow.png", titulo: "God of War", desenvolvedora: "Santa Monica Studio", ano: 2018},
         {img: "/imgs/astroneer.png", titulo: "Astroneer", desenvolvedora: "System Era Softworks", ano: 2019},
