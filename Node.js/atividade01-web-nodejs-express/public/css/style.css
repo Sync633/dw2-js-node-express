@@ -1,0 +1,32 @@
+* {
+    color: purple;
+    margin: 6px;
+}
+
+footer{
+    font-size: 20px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#table{
+    max-width: 99.5%;
+}
+
+#col-img{
+    width: 300px;
+}
+
+#col-img img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#cols{
+    width: 450px;
+    font-size: 18px;
+}
+

@@ -1,0 +1,31 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs') %>
+    <h1>Página de Aeronaves</h1>
+    <hr>
+
+    <h2>Lista de Aeronaves: </h2>
+
+    <table id="table" class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Fotos</th>
+                <th>Fabricante</th>
+                <th>Modelo</th>
+                <th>País</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% aeronaves.forEach(aeronave => { %>
+                <tr class="align-middle">
+                    <td id="col-img"><img style="width: 250px;" src="<%= aeronave.img %>" alt="<%= aeronave.modelo %>"></td>
+                    <td class="text-center" id="cols"><%=aeronave.fabricante%></td>
+                    <td class="text-center" id="cols"><strong><%=aeronave.modelo%></strong></td>
+                    <td class="text-center" id="cols"><%=aeronave.pais%></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+    <br>
+    <a href="/"><< Voltar a HomePage</a>
+<%- include ('partials/footer.ejs') %>
