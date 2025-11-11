@@ -1,0 +1,31 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs') %>
+    <h1>Página de Carros</h1>
+    <hr>
+
+    <h2>Lista de Carros: </h2>
+
+    <table id="table" class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Fotos</th>
+                <th>Fabricante</th>
+                <th>Modelo</th>
+                <th>País</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% carros.forEach(carro => { %>
+                <tr class="align-middle">
+                    <td id="col-img"><img style="width: 250px;" src="<%= carro.img %>" alt="<%= carro.modelo %>"></td>
+                    <td class="text-center" id="cols-table"><%= carro.fabricante %></td>
+                    <td class="text-center" id="cols-table"><strong><%= carro.modelo %></strong></td>
+                    <td class="text-center" id="cols-table"><%= carro.pais %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+    <br>
+    <a href="/"><< Voltar a HomePage</a>
+<%- include ('partials/footer.ejs') %>

@@ -1,0 +1,45 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs') %>
+    <h1>Página de Aeronaves</h1>
+    <hr>
+    
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1>Editando dados de <%= aeronave.modelo %></h1>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="/aeronaves/update/<%= aeronave.id %>" enctype="multipart/form-data">
+                    <label>Foto Atual:</label><br>
+                    <img src="<%= aeronave.urlFoto %>" alt="<%= aeronave.modelo %>" width="200px" class="img-thumbnail mb-3">
+                    <hr>
+
+                    <label>Alterar Foto:</label>
+                    <input type="file" name="urlFoto" id="urlFoto" class="form-control">
+
+                    <input type="hidden" name="urlFotoAntiga" value="<%= aeronave.urlFoto %>">
+
+                    <br>
+                    
+                    <label>Fabricante da Aeronave:</label>
+                    <input type="text" name="fabricante" id="fabricante" placeholder="Insira o Fabricante da Aeronave" class="form-control" value="<%= aeronave.fabricante %>" required>
+                    
+                    <label>Modelo da Aeronave:</label>
+                    <input type="text" name="modelo" id="modelo" placeholder="Insira o modelo da Aeronave" class="form-control" value="<%= aeronave.modelo %>" required>
+                    
+                    <label>Pais da Aeronave:</label>
+                    <input type="text" name="pais" id="pais" placeholder="Insira o Pais da Aeronave" class="form-control" value="<%= aeronave.pais %>" required>
+
+                    <br>
+
+                    <button type="submit" class="btn btn-success" onclick="return confirm('Confirma as alterações realizadas para a aeronave <%= aeronave.modelo %>?')">Editar</button>
+                    <button class="btn btn-warning ml-2" href="/aeronaves">Cancelar</button>
+                </form>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <a href="/"><< Voltar a HomePage</a>
+<%- include ('partials/footer.ejs') %>

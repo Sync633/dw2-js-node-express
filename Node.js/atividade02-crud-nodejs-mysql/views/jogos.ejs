@@ -1,0 +1,31 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs') %>
+    <h1>Página de Jogos</h1>
+    <hr>
+
+    <h2>Lista de Jogos: </h2>
+
+    <table id="table" class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Capa</th>
+                <th>Título</th>
+                <th>Desenvolvedora</th>
+                <th>Ano</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% jogos.forEach(jogo => { %>
+                <tr class="align-middle">
+                    <td id="col-img"><img style="width: 250px;" src="<%= jogo.img %>" alt="<%= jogo.titulo %>"></td>
+                    <td class="text-center" id="cols-table"><strong><%= jogo.titulo %></strong></td>
+                    <td class="text-center" id="cols-table"><%= jogo.desenvolvedora %></td>
+                    <td class="text-center" id="cols-table"><%= jogo.ano %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+    <br>
+    <a href="/"><< Voltar a HomePage</a>
+<%- include ('partials/footer.ejs') %>

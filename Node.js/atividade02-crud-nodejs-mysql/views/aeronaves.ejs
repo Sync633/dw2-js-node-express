@@ -1,0 +1,75 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/navbar.ejs') %>
+    <h1>Página de Aeronaves</h1>
+    <hr>
+    
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1>Cadastrar uma Aeronave</h1>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="/aeronaves/new" enctype="multipart/form-data">
+                    <label>Foto da Aeronave:</label>
+                    <input type="file" name="urlFoto" id="urlFoto" class="form-control" required>
+                    
+                    <label>Fabricante da Aeronave:</label>
+                    <input type="text" name="fabricante" id="fabricante" placeholder="Insira o Fabricante da Aeronave" class="form-control" required>
+                    
+                    <label>Modelo da Aeronave:</label>
+                    <input type="text" name="modelo" id="modelo" placeholder="Insira o modelo da Aeronave" class="form-control" required>
+                    
+                    <label>Pais da Aeronave:</label>
+                    <input type="text" name="pais" id="pais" placeholder="Insira o Pais da Aeronave" class="form-control" required>
+
+                    <br>
+
+                    <button class="btn btn-success">Cadastrar</button>
+                    <button type="reset" class="btn btn-secondary ml-2">Limpar</button>
+                </form>
+                <hr>
+            </div>
+        </div>
+    </div>
+        
+    <hr>
+
+    <h2>Lista de Aeronaves: </h2>
+
+    <table id="table" class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th class="text-center">Fotos</th>
+                <th class="text-center">Fabricante</th>
+                <th class="text-center">Modelo</th>
+                <th class="text-center">País</th>
+                <th class="text-center">Editar</th>
+                <th class="text-center">Deletar</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <% aeronaves.forEach(aeronave => { %>
+                <tr class="align-middle">
+                    <td id="col-img"><img style="width: 250px;" src="<%= aeronave.urlFoto %>" alt="<%= aeronave.modelo %>"></td>
+                    <td class="text-center" id="cols"><%=aeronave.fabricante %></td>
+                    <td class="text-center" id="cols"><strong><%=aeronave.modelo %></strong></td>
+                    <td class="text-center" id="cols"><%=aeronave.pais %></td>
+                    <td class="text-center" id="cols" style="width: 100px;">
+                        <a href="aeronaves/edit/<%= aeronave.id %>">
+                            <button class="btn btn-warning btn-sm">Editar</button>
+                        </a>
+                    </td>
+                    <td class="text-center" id="cols" style="width: 100px;">
+                        <a href="/aeronaves/delete/<%= aeronave.id %>" onclick="return confirm('Deseja mesmo excluir a aeronave <%= aeronave.modelo %>?')">
+                            <button class="btn btn-danger btn-sm">Excluir</button>
+                        </a>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+    <br>
+    <a href="/"><< Voltar a HomePage</a>
+<%- include ('partials/footer.ejs') %>
