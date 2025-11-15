@@ -8,7 +8,7 @@ const connection = new Sequelize({
     username: 'root',
     password: '',
     // Comente essa linha na primeira execução da aplicação
-    database: 'atividade02-crud-mysql', 
+    database: 'at2_crud_mysql', 
     timezone: "-03:00"
 })
 

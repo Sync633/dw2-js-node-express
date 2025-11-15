@@ -26,6 +26,8 @@ app.use("/", AeronavesController);
 app.use("/", CarrosController);
 app.use("/", JogosController);
 
+
+//Conectando com o banco de Dados
 connection
   .authenticate()
   .then(() => {
@@ -35,6 +37,15 @@ connection
     console.log(error);
 });
 
+//Criando o banco
+connection
+  .query("CREATE DATABASE IF NOT EXISTS at2_crud_mysql;")
+  .then(() => {
+    console.log("O banco de dados está criado");
+  })
+  .catch((error) => {
+    console.log(error);
+});
 
 // Criando a primeira rota do site (ROTA PRINCIPAL)
 app.get("/", (req, res) => {
